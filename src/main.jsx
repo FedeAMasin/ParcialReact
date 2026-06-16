@@ -8,8 +8,9 @@ import NavigationBar from './components/Navbar.jsx';
 createRoot(document.getElementById('root')).render(
   
     <HashRouter>
-      <App />
       <NavigationBar />
+      <App />
+      
     </HashRouter>
   
 )
