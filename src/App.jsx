@@ -12,6 +12,7 @@ function App() {
 
   return (
     <>
+    {/*agregamos la navbar para que el app maneje todas las rutas y la navegacion entre componentes.*/}
       <Navbar />
       <div className="container mt-3 strong">
         <Routes>
