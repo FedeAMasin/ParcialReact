@@ -11,10 +11,16 @@ function App() {
   
 
   return (
-    <Routes>
-      <Route path="/" element={<Inicio />} />
-      {/*<Route path="/post/:id" element={<PostDetailPage />} />*/}
-    </Routes>
+    <>
+      
+      <div className="container mt-3 strong">
+        <Routes>
+            <Route path="/" element={<Inicio />} />
+            {/* Chicos aca hay que agregar las rutas a sus componentes.*/}
+            {/* ej: <Route path="/post/:id" element={<PostDetailPage />} />*/}
+        </Routes>
+      </div>
+    </>
   )
 }
 

@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 const NavigationBar = () => {
   return (
     <nav className="bg-info-subtle text-dark fw-bold p-3 d-flex gap-3">
-      <ul>
-        <li><Link to="/" className="link-dark text-decoration-underline">Inicio</Link></li>        
-      </ul>
+      {/* Aca vamos agregando los links a las rutas de los componentes que agreguen.*/}
+        <Link to="/" className="link-dark text-decoration-underline">
+        Inicio
+        </Link>        
+      
     </nav>
   );
 };
