@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      
+      <Navbar />
       <div className="container mt-3 strong">
         <Routes>
             <Route path="/" element={<Inicio />} />
