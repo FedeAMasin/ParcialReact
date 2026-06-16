@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 //cada li es un link a una ruta diferente, por ejemplo: Inicio, consulta por id, etc.( aca deberian ir las rutas de los componentes de angel y mari.)
 const NavigationBar = () => {
   return (
-    <nav>
+    <nav className="bg-info-subtle text-dark fw-bold p-3 d-flex gap-3">
       <ul>
-        <li><Link to="/">Inicio</Link></li>        
+        <li><Link to="/" className="link-dark text-decoration-underline">Inicio</Link></li>        
       </ul>
     </nav>
   );
