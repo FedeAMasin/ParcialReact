@@ -183,18 +183,76 @@
   }
 }
 
-.claro {
+html.claro body {
   background-color: white;
   color: black;
-  min-height: 100vh;
-  padding: 20px;
 }
 
-.oscuro {
+html.oscuro body {
   background-color: #222;
   color: white;
-  min-height: 100vh;
-  padding: 20px;
+}
+
+html.oscuro .btn-primary {
+  background-color: #d4a017;
+  border-color: #d4a017;
+  color: black;
+}
+
+html.oscuro .btn-primary:hover,
+html.oscuro .btn-primary:focus {
+  background-color: #b8860b;
+  border-color: #b8860b;
+  color: black;
+}
+
+html.oscuro .btn-primary:disabled {
+  background-color: #d4a017;
+  border-color: #d4a017;
+  opacity: 0.65;
+}
+
+html.oscuro .btn-outline-primary {
+  border-color: #d4a017;
+  color: #d4a017;
+}
+
+html.oscuro .btn-outline-primary:hover,
+html.oscuro .btn-outline-primary:focus {
+  background-color: #d4a017;
+  border-color: #d4a017;
+  color: black;
+}
+
+html.oscuro .card-header.bg-primary {
+  background-color: #d4a017 !important;
+}
+
+html.oscuro .text-primary,
+html.oscuro .spinner-border.text-primary {
+  color: #d4a017 !important;
+}
+
+html.oscuro .card {
+  background-color: #333;
+  border-color: #444;
+}
+
+html.oscuro .card-body {
+  color: #ddd;
+}
+
+html.oscuro .card-header {
+  background-color: #2a2a2a;
+  border-bottom-color: #444;
+}
+
+html.oscuro .card-header.bg-light {
+  background-color: #2a2a2a !important;
+}
+
+html.oscuro .text-muted {
+  color: #aaa !important;
 }
 
 button {

@@ -1,8 +1,9 @@
 const URL_BASE = 'https://jsonplaceholder.typicode.com/posts';
 
 
-export const getAllPosts = async () => {
-  const res = await fetch(URL_BASE);
+export const getAllPosts = async (limit = 20) => {
+  const url = limit ? `${URL_BASE}?_limit=${limit}` : URL_BASE;
+  const res = await fetch(url);
   if (!res.ok) {
     throw new Error('No se pudieron cargar los posts');
   }
