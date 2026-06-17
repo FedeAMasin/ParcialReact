@@ -9,3 +9,4 @@ Preparacion de ambiente para Poder visualizar el entorno.
 5- escribimos el comando npm install ( en caso que usemos el paquete instalador de dependencias de node, sino adaptarlo al gestor de paquetes que usemos)
 6- tipeamos el comando "npm run dev" y damos enter.
 7- en la consola deberia mostrarlos una direccion "localhost"podemos clickear en ella para poder verificar el proyecto corriendo en local.
+<h1>SOY UN TITULO</h1>
