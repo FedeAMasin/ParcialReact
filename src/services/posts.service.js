@@ -1,41 +1,50 @@
-const BASE_URL = 'https://jsonplaceholder.typicode.com/posts';
+const URL_BASE = 'https://jsonplaceholder.typicode.com/posts';
+
 
 export const getAllPosts = async () => {
-  const response = await fetch(BASE_URL);
-  if (!response.ok) throw new Error('Error al obtener los posts');
-  return response.json();
+  const res = await fetch(URL_BASE);
+  if (!res.ok) {
+    throw new Error('No se pudieron cargar los posts');
+  }
+  return res.json();
 };
 
 export const getPostById = async (id) => {
-  const response = await fetch(`${BASE_URL}/${id}`);
-  if (!response.ok) throw new Error('Error al obtener el post');
-  return response.json();
+  const res = await fetch(`${URL_BASE}/${id}`);
+  if (!res.ok) {
+    throw new Error('No se encontró el post');
+  }
+  return res.json();
 };
 
-export const createPost = async (postData) => {
-  const response = await fetch(BASE_URL, {
+export const createPost = async (data) => {
+  const res = await fetch(URL_BASE, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(postData),
+    body: JSON.stringify(data),
   });
-  if (!response.ok) throw new Error('Error al crear el post');
-  return response.json();
+
+  if (!res.ok) throw new Error('No se pudo crear el post');
+
+  return res.json();
 };
 
-export const updatePost = async (id, postData) => {
-  const response = await fetch(`${BASE_URL}/${id}`, {
+export const updatePost = async (id, data) => {
+  const res = await fetch(`${URL_BASE}/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id, ...postData }),
+    body: JSON.stringify({ id, ...data }),
   });
-  if (!response.ok) throw new Error('Error al editar el post');
-  return response.json();
+
+  if (!res.ok) throw new Error('No se pudo editar el post');
+
+  return res.json();
 };
 
 export const deletePost = async (id) => {
-  const response = await fetch(`${BASE_URL}/${id}`, {
-    method: 'DELETE',
-  });
-  if (!response.ok) throw new Error('Error al eliminar el post');
+  const res = await fetch(`${URL_BASE}/${id}`, { method: 'DELETE' });
+
+  if (!res.ok) throw new Error('No se pudo eliminar el post');
+
   return true;
-};
+}; 

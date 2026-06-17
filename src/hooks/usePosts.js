@@ -12,26 +12,34 @@ const usePosts = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    getAllPosts()
-      .then((data) => setPosts(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
+    const cargarPosts = async () => {
+      try {
+        const data = await getAllPosts();
+        setPosts(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    cargarPosts();
   }, []);
 
-  const handleCreate = async (postData) => {
+  const handleCreate = async (data) => {
     try {
-      const newPost = await createPost(postData);
-      setPosts((prev) => [newPost, ...prev]);
+      const nuevo = await createPost(data);
+      setPosts((prev) => [nuevo, ...prev]);
     } catch (err) {
       setError(err.message);
     }
   };
 
-  const handleUpdate = async (id, postData) => {
+  const handleUpdate = async (id, data) => {
     try {
-      const updated = await updatePost(id, postData);
+      const actualizado = await updatePost(id, data);
       setPosts((prev) =>
-        prev.map((post) => (post.id === id ? updated : post))
+        prev.map((p) => (p.id === id ? actualizado : p))
       );
     } catch (err) {
       setError(err.message);
@@ -41,13 +49,20 @@ const usePosts = () => {
   const handleDelete = async (id) => {
     try {
       await deletePost(id);
-      setPosts((prev) => prev.filter((post) => post.id !== id));
+      setPosts((prev) => prev.filter((p) => p.id !== id));
     } catch (err) {
       setError(err.message);
     }
   };
 
-  return { posts, loading, error, handleCreate, handleUpdate, handleDelete };
+  return {
+    posts,
+    loading,
+    error,
+    handleCreate,
+    handleUpdate,
+    handleDelete,
+  };
 };
 
 export default usePosts;
