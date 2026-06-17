@@ -4,7 +4,7 @@ import './App.css'
 //Poner rutas para importar componentes en la navegación
 //en este archivo deberia coordinar la estructura de la navegacion.
 import Inicio from './pages/Inicio.jsx'
-import HooksPage from './pages/HooksPage'
+import HooksPage from './hooks/HooksPage'
 //import PostDetailPage from './pages/PostDetailPage'
 import Navbar from './components/Navbar'
 
