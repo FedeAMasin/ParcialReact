@@ -182,3 +182,22 @@
     border-right-color: var(--border);
   }
 }
+
+.claro {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.oscuro {
+  background-color: #222;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px 0;
+}

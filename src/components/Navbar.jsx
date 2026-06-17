@@ -9,7 +9,10 @@ const NavigationBar = () => {
       {/* Aca vamos agregando los links a las rutas de los componentes que agreguen.*/}
         <Link to="/" className="link-dark text-decoration-underline">
         Inicio
-        </Link>        
+        </Link>
+        <Link to="/hooks" className="link-dark text-decoration-underline">
+        Hooks
+        </Link>       
       
     </nav>
   );
