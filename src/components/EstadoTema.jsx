@@ -15,5 +15,3 @@ function EstadoTema() {
 
 export default EstadoTema;
 
-/* consume el contexto
- y muestra el tema actual*/

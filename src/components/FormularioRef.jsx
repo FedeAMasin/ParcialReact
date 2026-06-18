@@ -5,7 +5,7 @@ function FormularioRef() {
   const inputRef = useRef(null); /*creamos una referencia */
 
   useEffect(() => {
-    inputRef.current.focus();/* cuando abrimos la pantalla, cursor dentro del input automaticamente*/
+    inputRef.current.focus();/*Conh el .current.focus dejamos el cursor dentro del campo. */
   }, []);
 
   return (

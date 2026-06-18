@@ -5,18 +5,14 @@ function MostrarTema() {
 const { tema, setTema } = useContext(TemaContext);
 
   return (
-    <>
-    
-    <button onClick={() =>
-     setTema(tema === "claro" ? "oscuro" : "claro")
-
-    }
+    <button 
+      className="btn btn-outline-secondary me-3"
+      onClick={() => setTema(tema === "claro" ? "oscuro" : "claro")}
+      aria-label="Cambiar tema"
     >
-  Cambiar Tema
-</button>
-</>
+      Tema
+    </button>
   );
 }
 
 export default MostrarTema;
-
