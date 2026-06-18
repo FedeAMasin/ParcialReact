@@ -4,7 +4,7 @@ import { getPostById, updatePost } from '../services/posts.service';
 import FormularioEditarPost from '../components/FormularioEditarPost';
 
 function PaginaDetallePost() {
-  const { id } = useParams();
+  const { id } = useParams();// usamos el use params para tener el id del post  
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -29,7 +29,7 @@ function PaginaDetallePost() {
   const manejarActualizar = async (postId, datos) => {
     const actualizado = await updatePost(postId, datos);
     setPost(actualizado);
-  };
+  };// la idea de este handleActualice es que cuando se actualice un post recargue la pag y muestre el post con los cambios hehcos. 
 
   if (loading) {
     return (
@@ -40,7 +40,7 @@ function PaginaDetallePost() {
         <p className="mt-2">Cargando post...</p>
       </div>
     );
-  }
+  }// el metodode validacion de carga mas feo que existe 
 
   if (error) {
     return (

@@ -20,7 +20,7 @@ function TarjetaPost({ post, onDelete }) {
             aria-label={`Eliminar post ${post.id}`}
           >
             Eliminar
-          </button>
+          </button>   {/*no se si correspondia pero lo sacamos del parcial y lo modificamos para que use props */}
         </div>
       </div>
     </div>

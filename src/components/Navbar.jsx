@@ -11,7 +11,7 @@ const NavigationBar = () => {
       <Link to="/nuevo-post" className="link-dark text-decoration-underline">
         Nuevo Post
       </Link>       
-    </nav>
+    </nav> // para la navegacion en la barra use los links y en la app use los routes. mas facil asi manejamos las rutas desde la app nomas.
   );
 };
 
