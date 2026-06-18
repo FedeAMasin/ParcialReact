@@ -54,7 +54,7 @@ http://localhost:5173
 
 ## GitHub Pages
 
-[Agregar aquí la URL de GitHub Pages cuando el proyecto sea publicado]
+https://fedeamasin.github.io/ParcialReact/
 
-https://github.com/FedeAMasin/ParcialReact.git
+
 
